@@ -1,113 +1,154 @@
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
+import React from "react";
+import {
+  Sparkles,
+  ArrowRight,
+  Heart,
+  Star,
+  Zap,
+  Briefcase,
+  Sofa,
+  HardHat,
+  Smartphone,
+  Users,
+} from "lucide-react";
 
-export default function Home() {
+const LandingPage = () => {
+  const sections = [
+    {
+      title: "About Us",
+      icon: <Sparkles className="h-8 w-8 text-yellow-400" />,
+      description:
+        "Lyvin Forward Premier Company is a pioneering enterprise in Nairobi, Kenya, committed to delivering innovative solutions and exceeding client expectations.",
+      linkText: "Learn Our Story",
+      href: "/about",
+    },
+    {
+      title: "Our Values",
+      icon: <Heart className="h-8 w-8 text-red-500" />,
+      description:
+        "Our core values of innovation, excellence, and client-centricity guide every aspect of our operations and relationships.",
+      linkText: "Discover Our Values",
+      href : "/our-values"
+    },
+    {
+      title: "What We Do",
+      icon: <Briefcase className="h-8 w-8 text-blue-500" />,
+      description:
+        "From office supplies to construction materials, we offer a wide range of products and services to meet diverse client needs.",
+      linkText: "Explore Our Services",
+      href : "/what-we-do"
+    },
+    {
+      title: "Our Team",
+      icon: <Users className="h-8 w-8 text-green-500" />,
+      description:
+        "Meet the passionate professionals driving our success and commitment to excellence.",
+      linkText: "Meet Our Team",
+      href : "/our-team"
+    },
+  ];
+
+  const services = [
+    {
+      name: "Office & School Supplies",
+      icon: <Briefcase className="h-12 w-12 text-blue-500" />,
+    },
+    { name: "Furniture", icon: <Sofa className="h-12 w-12 text-green-500" /> },
+    {
+      name: "Construction & Building",
+      icon: <HardHat className="h-12 w-12 text-yellow-500" />,
+    },
+    {
+      name: "Electronics",
+      icon: <Smartphone className="h-12 w-12 text-purple-500" />,
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <div className="max-w-7xl my-4 rounded mx-auto px-4 py-12 bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 min-h-screen">
+      <header className="mb-16 text-center">
+        <h1 className="text-6xl font-bold text-indigo-700 mb-2 relative inline-block">
+          Lyvin Forward Premier Company
+          <Sparkles className="absolute -top-6 -left-6 text-yellow-400 h-12 w-12 animate-pulse" />
+          <Sparkles className="absolute -top-6 -right-6 text-yellow-400 h-12 w-12 animate-pulse" />
+        </h1>
+        <p className="text-2xl text-indigo-500 mt-4">
+          Innovative Solutions for Tomorrow's Challenges
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </header>
+
+      <section className="mb-16 bg-white rounded-3xl p-10 shadow-lg max-w-4xl mx-auto border-4 border-indigo-200">
+        <h2 className="text-3xl font-semibold mb-6 text-indigo-600">
+          Welcome to Lyvin Forward
+        </h2>
+        <p className="mb-6 text-gray-700 leading-relaxed text-lg">
+          At Lyvin Forward Premier Company, we're dedicated to providing
+          innovative solutions and exceptional service. Our commitment to
+          excellence and client satisfaction drives everything we do. Discover
+          how we can help your business thrive in today's dynamic marketplace.
+        </p>
+        <a
+          href="/about"
+          className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
+        >
+          Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
+        </a>
+      </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow-lg p-6 border-2 border-indigo-100 transform hover:scale-105 transition-transform duration-300"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <div className="flex items-center mb-4">
+              {section.icon}
+              <h3 className="text-2xl font-semibold text-indigo-700 ml-4">
+                {section.title}
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">{section.description}</p>
+            <a
+              href={section.href}
+              className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
+            >
+              {section.linkText} <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <section className="mb-16 bg-white rounded-3xl p-10 shadow-lg max-w-4xl mx-auto border-4 border-indigo-200">
+        <h2 className="text-3xl font-semibold mb-6 text-indigo-600 text-center">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              {service.icon}
+              <p className="mt-2 font-medium text-gray-700">{service.name}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="text-center">
+        <h2 className="text-3xl font-semibold mb-6 text-indigo-600">
+          Ready to Get Started?
+        </h2>
+        <p className="text-xl text-gray-700 mb-8">
+          Let's work together to elevate your business and achieve your goals.
+        </p>
         <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#"
+          className="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700 transition-colors duration-300"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          Contact Us Today
         </a>
       </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default LandingPage;
