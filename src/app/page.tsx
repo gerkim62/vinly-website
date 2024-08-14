@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
+
 import {
   Check,
   ChevronRight,
@@ -16,7 +19,10 @@ import {
 } from "lucide-react";
 
 const Hero = () => (
-  <section id="home" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white relative">
+  <section
+    id="home"
+    className="bg-gradient-to-r from-blue-600 to-blue-800 text-white relative"
+  >
     <div className="absolute inset-0 bg-pattern opacity-10"></div>
     <div className="container mx-auto pl-4 flex flex-col md:flex-row items-center relative z-10">
       <div className="md:w-1/2 my-8 md:mb-0 ">
