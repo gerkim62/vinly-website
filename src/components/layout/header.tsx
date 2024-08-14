@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { Menu } from "lucide-react";
 import { useState } from "react";
@@ -6,11 +7,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-md top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="text-2xl font-bold text-blue-700">
-          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="h-10 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}

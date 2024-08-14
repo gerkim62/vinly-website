@@ -201,10 +201,10 @@ const TeamSection = () => (
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
-          { name: "John Doe", role: "CEO", image: "/team1.jpg" },
-          { name: "Jane Smith", role: "CTO", image: "/team2.jpg" },
-          { name: "Mike Johnson", role: "CFO", image: "/team3.jpg" },
-          { name: "Emily Davis", role: "COO", image: "/team4.jpg" },
+          { name: "John Doe", role: "CEO", image: "/profile.jpeg" },
+          { name: "Jane Smith", role: "CTO", image: "/profile.jpeg" },
+          { name: "Mike Johnson", role: "CFO", image: "/profile.jpeg" },
+          { name: "Emily Davis", role: "COO", image: "/profile.jpeg" },
         ].map((member) => (
           <div
             key={member.name}
