@@ -188,7 +188,7 @@ const TeamSection = () => (
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
-          { name: "Kevin Mosara", role: "Director", image: "/profile.jpeg" },
+          { name: "Kevin Mosara", role: "Director", image: "/kevin-mosara.jpeg" },
           {
             name: "Emily Angima",
             role: "Director",
