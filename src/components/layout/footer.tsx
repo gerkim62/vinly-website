@@ -27,9 +27,9 @@ const Footer = () => (
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact</h3>
-          <p className="text-gray-400">123 Main St, City, Country</p>
-          <p className="text-gray-400">Phone: (123) 456-7890</p>
-          <p className="text-gray-400">Email: info@company.com</p>
+          <p className="text-gray-400">P.O Box 4742-00200</p>
+          <p className="text-gray-400">Phone: 0721567833/0792176004</p>
+          <p className="text-gray-400">Email: forwardbridge.v@gmail.com</p>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-4">Follow Us</h3>

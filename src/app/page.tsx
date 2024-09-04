@@ -202,9 +202,9 @@ const ContactSection = () => (
         </div>
         <div className="grid grid-cols-1 gap-6 order-1 md:order-2">
           {[
-            { icon: Phone, title: "Phone", content: "+254 700 123 456" },
-            { icon: Mail, title: "Email", content: "info@lyvinforward.com" },
-            { icon: MapPin, title: "Location", content: "Nairobi, Kenya" },
+            { icon: Phone, title: "Phone", content: "0792176004/0721567833" },
+            { icon: Mail, title: "Email", content: "forwardbridge.v@gmail.com" },
+            { icon: MapPin, title: "P.O Box", content: "4742-00200" },
           ].map((item) => (
             <div key={item.title} className="bg-white p-6 rounded-lg shadow-md flex items-center">
               <item.icon className="w-12 h-12 text-indigo-700 mr-4" />
