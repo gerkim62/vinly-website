@@ -49,7 +49,7 @@ const Footer = () => (
       <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
         Designed by GeriSam Technologies.{" "}
         <a
-          href="https://wa.me/254715870654?text=Hello%2C%20I%27d%20like%20more%20information%20about%20your%20services"
+          href="https://wa.me/254704383654?text=Hello%2C%20I%27d%20like%20more%20information%20about%20your%20services"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white font-semibold underline hover:no-underline transition-colors duration-300"
