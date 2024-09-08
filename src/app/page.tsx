@@ -15,7 +15,9 @@ import {
   MapPin,
   Mail,
   Phone,
+  Pill,
 } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => (
   <section
@@ -58,9 +60,9 @@ const AboutUsSection = () => (
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="order-2 md:order-1">
           <img
-            src="/person.jpeg"
+            src="/about.jpg"
             alt="About Us"
-            className="rounded-lg shadow-lg w-full h-72 object-cover"
+            className="rounded-lg shadow-lg w-auto h-full object-fit"
           />
         </div>
         <div className="space-y-6 order-1 md:order-2">
@@ -94,22 +96,37 @@ const ServicesSection = () => (
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-800">
         Our Services
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
           {
             name: "Cleaning Services",
             icon: PenToolIcon,
-            image: "/office.webp",
+            image: "/cleaning.png",
           },
-          { name: "Construction", icon: Building, image: "/office.webp" },
-          { name: "Safety & Maintenance", icon: Shield, image: "/office.webp" },
-          { name: "Furniture Solutions", icon: Layout, image: "/office.webp" },
+          {
+            name: "Building & Construction",
+            icon: Building,
+            image: "/construction.png",
+          },
+          { name: "Safety & Maintenance", icon: Shield, image: "/safety.jpg" },
+          {
+            name: "Furniture Solutions",
+            icon: Layout,
+            image: "/furniture.jpg",
+          },
+          {
+            name: "Pharmaceutical Supplies",
+            icon: Pill,
+            image: "/pharma.jpg",
+          },
         ].map((service) => (
           <div
             key={service.name}
             className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <img
+            <Image
+              width={300}
+              height={200}
               src={service.image}
               alt={service.name}
               className="w-full h-48 object-cover"
@@ -188,7 +205,11 @@ const TeamSection = () => (
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
-          { name: "Kevin Mosara", role: "Director", image: "/kevin-mosara.jpeg" },
+          {
+            name: "Kevin Mosara",
+            role: "Director",
+            image: "/kevin-mosara.jpeg",
+          },
           {
             name: "Emily Angima",
             role: "Director",
