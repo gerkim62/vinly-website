@@ -115,7 +115,7 @@ const ServicesSection = () => (
             image: "/furniture.jpg",
           },
           {
-            name: "Pharmaceutical Supplies",
+            name: "Medical Supplies",
             icon: Pill,
             image: "/pharma.jpg",
           },
